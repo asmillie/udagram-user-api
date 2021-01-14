@@ -11,5 +11,5 @@ script:
   - docker tag udagram-user-api elsrickle/udagram-user-api:latest
 
 after_success:
-  - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
+  - echo "$DOCKER_ACCESS_TOKEN" | docker login -u "$DOCKER_USERNAME" --password-stdin
   - docker push elsrickle/udagram-user-api
