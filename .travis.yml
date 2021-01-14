@@ -7,7 +7,7 @@ services:
 
 script:
   - docker --version
-  - docker build -t udagram-user-api
+  - docker build --rm -t udagram-user-api
   - docker tag udagram-user-api elsrickle/udagram-user-api:latest
 
 after_success:
