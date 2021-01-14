@@ -1,0 +1,15 @@
+language: node_js
+node_js:
+  - 12.18.3
+
+services:
+  docker
+
+script:
+  - docker --version
+  - docker build -t udagram-user-api
+  - docker tag udagram-user-api elsrickle/udagram-user-api:latest
+
+after_success:
+  - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
+  - docker push elsrickle/udagram-user-api
