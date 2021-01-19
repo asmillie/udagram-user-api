@@ -7,11 +7,14 @@ branches:
   - main
 
 services:
+  npm
   docker
 
 script:
+  - npm -v
+  - npm run build
   - docker --version
-  - docker build --rm -t udagram-user-api .
+  - docker build -t udagram-user-api .
   - docker tag udagram-user-api elsrickle/udagram-user-api:latest
 
 after_success:
