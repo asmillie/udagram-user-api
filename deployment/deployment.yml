@@ -19,3 +19,59 @@ spec:
         image: elsrickle/udagram-user-api
         ports:
         - containerPort: 8080
+        env:
+          - name: CORS_ALLOWED_URL_1
+            valueFrom:
+              secretKeyRef:
+                name: <kubectl secret name>
+                key: <kubectl secret key>
+          - name: CORS_ALLOWED_URL_2
+            valueFrom:
+              secretKeyRef:
+                name: <kubectl secret name>
+                key: <kubectl secret key>
+          - name: SERVER_PORT
+            valueFrom:
+              secretKeyRef:
+                name: <kubectl secret name>
+                key: <kubectl secret key>
+          - name: POSTGRES_USERNAME
+            valueFrom:
+              secretKeyRef:
+                name: <kubectl secret name>
+                key: <kubectl secret key>
+          - name: POSTGRES_PASSWORD
+            valueFrom:
+              secretKeyRef:
+                name: <kubectl secret name>
+                key: <kubectl secret key>
+          - name: POSTGRES_HOST
+            valueFrom:
+              secretKeyRef:
+                name: <kubectl secret name>
+                key: <kubectl secret key>
+          - name: POSTGRES_DB
+            valueFrom:
+              secretKeyRef:
+                name: <kubectl secret name>
+                key: <kubectl secret key>
+          - name: AWS_S3_MEDIA_BUCKET
+            valueFrom:
+              secretKeyRef:
+                name: <kubectl secret name>
+                key: <kubectl secret key>
+          - name: AWS_REGION
+            valueFrom:
+              secretKeyRef:
+                name: <kubectl secret name>
+                key: <kubectl secret key>
+          - name: AWS_PROFILE
+            valueFrom:
+              secretKeyRef:
+                name: <kubectl secret name>
+                key: <kubectl secret key>
+          - name: JWT_SECRET
+            valueFrom:
+              secretKeyRef:
+                name: <kubectl secret name>
+                key: <kubectl secret key>
