@@ -34,6 +34,7 @@ $RECYCLE.BIN/
 postgres_dev/
 logfile
 mock/*
+deployment/secret*
 
 .DS_Store
 Thumbs.db
