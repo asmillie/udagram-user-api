@@ -23,55 +23,55 @@ spec:
           - name: CORS_ALLOWED_URL_1
             valueFrom:
               secretKeyRef:
-                name: <kubectl secret name>
-                key: <kubectl secret key>
+                name: envVars
+                key: corsAllowedUrl1
           - name: CORS_ALLOWED_URL_2
             valueFrom:
               secretKeyRef:
-                name: <kubectl secret name>
-                key: <kubectl secret key>
+                name: envVars
+                key: corsAllowedUrl2
           - name: SERVER_PORT
             valueFrom:
               secretKeyRef:
-                name: <kubectl secret name>
-                key: <kubectl secret key>
+                name: envVars
+                key: serverPort
           - name: POSTGRES_USERNAME
             valueFrom:
               secretKeyRef:
-                name: <kubectl secret name>
-                key: <kubectl secret key>
+                name: envVars
+                key: pgUsername
           - name: POSTGRES_PASSWORD
             valueFrom:
               secretKeyRef:
-                name: <kubectl secret name>
-                key: <kubectl secret key>
+                name: envVars
+                key: 1XKoi8NTqfFk4aK9
           - name: POSTGRES_HOST
             valueFrom:
               secretKeyRef:
-                name: <kubectl secret name>
-                key: <kubectl secret key>
+                name: envVars
+                key: pgHost
           - name: POSTGRES_DB
             valueFrom:
               secretKeyRef:
-                name: <kubectl secret name>
-                key: <kubectl secret key>
+                name: envVars
+                key: pgDb
           - name: AWS_S3_MEDIA_BUCKET
             valueFrom:
               secretKeyRef:
-                name: <kubectl secret name>
-                key: <kubectl secret key>
+                name: envVars
+                key: awsS3MediaBucket
           - name: AWS_REGION
             valueFrom:
               secretKeyRef:
-                name: <kubectl secret name>
-                key: <kubectl secret key>
+                name: envVars
+                key: awsRegion
           - name: AWS_PROFILE
             valueFrom:
               secretKeyRef:
-                name: <kubectl secret name>
-                key: <kubectl secret key>
+                name: envVars
+                key: awsProfile
           - name: JWT_SECRET
             valueFrom:
               secretKeyRef:
-                name: <kubectl secret name>
-                key: <kubectl secret key>
+                name: envVars
+                key: jwtSecret
