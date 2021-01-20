@@ -41,7 +41,12 @@ import {V0_USER_MODELS} from './controllers/v0/model.index';
   // Root URI call
   app.get( '/', async ( req, res ) => {
     res.send( '/api/v0/' );
-  } );
+  });
+
+  // Health Check Endpoint
+  app.get('/health', (req, res) => {
+    res.status(200).send('Server Running');
+  });
 
 
   // Start the Server
